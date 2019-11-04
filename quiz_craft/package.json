@@ -4,13 +4,13 @@
   "private": true,
   "dependencies": {
     "antd": "^3.24.3",
-    "electron": "^7.0.1",
     "electron-is-dev": "^1.1.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0",
     "underscore": "^1.9.1"
   },
+  "homepage": "./",
   "scripts": {
     "react-start": "react-scripts start",
     "react-build": "react-scripts build",
@@ -19,7 +19,10 @@
     "electron-build": "electron-builder",
     "build": "yarn react-build && yarn electron-build",
     "release": "yarn react-build && electron-builder --publish=always",
-    "start": "concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron .\""
+    "start": "concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron .\"",
+    "postinstall": "electron-builder install-app-deps",
+    "preelectron-pack": "yarn build",
+    "electron-pack": "electron-builder -mw"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,8 +42,23 @@
   "devDependencies": {
     "concurrently": "^5.0.0",
     "cross-env": "^6.0.3",
+    "electron": "^7.0.1",
     "electron-builder": "^22.1.0",
+    "typescript": "^3.6.4",
     "wait-on": "^3.3.0"
   },
-  "main": "public/electron.js"
+  "main": "public/electron.js",
+  "author": {
+    "name": "Nicholas DeTore"
+  },
+  "build": {
+    "productName": "QuizCraft",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  }
 }
