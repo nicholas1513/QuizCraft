@@ -1,0 +1,331 @@
+{
+    "0": {
+        "answer": [
+            1
+        ],
+        "choices": [
+            "Adware ",
+            "Malware",
+            "Ransomware",
+            "Spyware"
+        ],
+        "originalQuestionHeader": "QUESTION 1",
+        "prompt": "Harmful programs used to disrupt computer operation, gather sensitive information, or gain unauthorized \naccess to computer systems are commonly referred to as:\n"
+    },
+    "1": {
+        "answer": [
+            0,
+            1,
+            4
+        ],
+        "choices": [
+            "A self-replicating computer program containing malicious segment",
+            "Requires its host application to be run to make the virus active ",
+            "A standalone malicious computer program that replicates itself over a computer network",
+            "Can run by itself without any interaction",
+            "Attaches itself to an application program or other executable component",
+            "A self-contained malicious program or code that does need a host to propagate itself"
+        ],
+        "originalQuestionHeader": "QUESTION 2",
+        "prompt": "Which of the following statements apply to the definition of a computer virus? (Select 3 answers)\n"
+    },
+    "2": {
+        "answer": [
+            1
+        ],
+        "choices": [
+            "Backdoor ",
+            "Ransomware",
+            "Keylogger",
+            "Rootkit"
+        ],
+        "originalQuestionHeader": "QUESTION 3",
+        "prompt": "Which of the terms listed below refers to an example of a crypto-malware?\n"
+    },
+    "3": {
+        "answer": [
+            2
+        ],
+        "choices": [
+            "Grayware",
+            "Adware",
+            "Ransomware",
+            "Spyware"
+        ],
+        "originalQuestionHeader": "QUESTION 4",
+        "prompt": "Malware that restricts access to a computer system by encrypting files or locking the entire system down \nuntil the user performs requested action is known as:\n"
+    },
+    "4": {
+        "answer": [
+            1
+        ],
+        "choices": [
+            "Spyware",
+            "Worm",
+            "Trojan",
+            "Spam"
+        ],
+        "originalQuestionHeader": "QUESTION 5",
+        "prompt": "A standalone malicious computer program that typically propagates itself over a computer network to adversely \naffect system resources and network bandwidth is called:\n"
+    },
+    "5": {
+        "answer": [
+            0
+        ],
+        "choices": [
+            "True",
+            "False"
+        ],
+        "originalQuestionHeader": "QUESTION 6",
+        "prompt": "A type of software that performs unwanted and harmful actions in disguise of a legitimate and useful program is \nknown as a Trojan horse. This type of malware may act like a legitimate program and have all the expected \nfunctionalities, but apart from that it will also contain a portion of malicious code that the user is unaware of.\n"
+    },
+    "6": {
+        "answer": [
+            0
+        ],
+        "choices": [
+            "Rootkit",
+            "Spyware",
+            "Backdoor",
+            "Trojan"
+        ],
+        "originalQuestionHeader": "QUESTION 7",
+        "prompt": "A collection of software tools used by a hacker to mask intrusion and obtain administrator-level access to a \ncomputer or computer network is known as:\n"
+    },
+    "7": {
+        "answer": [
+            0
+        ],
+        "choices": [
+            "Keylogger",
+            "Vulnerability scanner",
+            "Computer worm",
+            "Packet sniffer"
+        ],
+        "originalQuestionHeader": "QUESTION 8",
+        "prompt": "Which of the following answers lists an example of spyware?\n"
+    },
+    "8": {
+        "answer": [
+            2
+        ],
+        "choices": [
+            "Unsolicited or undesired electronic messages",
+            "Malicious program that sends copies of itself to other computers on the network",
+            "Software that displays advertisements",
+            "Malicious software that collects information about users without their knowledge"
+        ],
+        "originalQuestionHeader": "QUESTION 9",
+        "prompt": "What is adware?\n"
+    },
+    "9": {
+        "answer": [
+            3
+        ],
+        "choices": [
+            "Crypto-malware",
+            "Adware",
+            "Ransomware",
+            "Spyware"
+        ],
+        "originalQuestionHeader": "QUESTION 10",
+        "prompt": "Malicious software collecting information about users without their knowledge/consent is known as:\n"
+    },
+    "10": {
+        "answer": [
+            2
+        ],
+        "choices": [
+            "Trojan ",
+            "Worm",
+            "Bot",
+            "Honeypot"
+        ],
+        "originalQuestionHeader": "QUESTION 11",
+        "prompt": "A malware-infected networked host under remote control of a hacker is commonly referred to as:\n"
+    },
+    "11": {
+        "answer": [
+            1
+        ],
+        "choices": [
+            "Honeynet",
+            "Botnet",
+            "Quarantine network",
+            "Malware"
+        ],
+        "originalQuestionHeader": "QUESTION 12",
+        "prompt": "Which of the terms listed below applies to a collection of intermediary compromised systems that are \nused as a platform for a DDoS attack?\n"
+    },
+    "12": {
+        "answer": [
+            1
+        ],
+        "choices": [
+            "pcap",
+            "RAT",
+            "MaaS",
+            "pfSense"
+        ],
+        "originalQuestionHeader": "QUESTION 13",
+        "prompt": "Which type of Trojan enables unauthorized remote access to a compromised system?\n"
+    },
+    "13": {
+        "answer": [
+            1
+        ],
+        "choices": [
+            "Backdoor",
+            "Logic bomb",
+            "Dropper",
+            "Retrovirus"
+        ],
+        "originalQuestionHeader": "QUESTION 14",
+        "prompt": "Malicious code activated by a specific event is called:\n"
+    },
+    "14": {
+        "answer": [
+            3
+        ],
+        "choices": [
+            "Logic bomb",
+            "Trojan horse",
+            "Rootkit",
+            "Backdoor"
+        ],
+        "originalQuestionHeader": "QUESTION 15",
+        "prompt": "Which of the following answers refers to an undocumented (and often legitimate) way of gaining access to \na program, online service, or an entire computer system?\n"
+    },
+    "15": {
+        "answer": [
+            2
+        ],
+        "choices": [
+            "Shoulder surfing",
+            "Privilege escalation",
+            "Social engineering",
+            "Penetration testing"
+        ],
+        "originalQuestionHeader": "QUESTION 16",
+        "prompt": "An unauthorized practice of obtaining confidential information by manipulating people into disclosing \nsensitive data is referred to as:\n"
+    },
+    "16": {
+        "answer": [
+            0,
+            2
+        ],
+        "choices": [
+            "Phishing",
+            "Watering hole attack",
+            "Social engineering",
+            "Bluejacking",
+            "Vishing"
+        ],
+        "originalQuestionHeader": "QUESTION 17",
+        "prompt": "A fraudulent email requesting its recipient to reveal sensitive information (e.g. username and password) used \nlater by an attacker for the purpose of identity theft is an example of: (Select all that apply)\n"
+    },
+    "17": {
+        "answer": [
+            0
+        ],
+        "choices": [
+            "Phishing",
+            "Privilege escalation",
+            "Backdoor access",
+            "Shoulder surfing"
+        ],
+        "originalQuestionHeader": "QUESTION 18",
+        "prompt": "A social engineering technique whereby attackers under disguise of a legitimate request attempt to gain access \nto confidential information they shouldn't have access to is commonly referred to as:\n"
+    },
+    "18": {
+        "answer": [
+            1
+        ],
+        "choices": [
+            "Vishing",
+            "Spear phishing",
+            "Spoofing",
+            "Whaling"
+        ],
+        "originalQuestionHeader": "QUESTION 19",
+        "prompt": "Phishing scams targeting a specific group of people are referred to as:\n"
+    },
+    "19": {
+        "answer": [
+            2
+        ],
+        "choices": [
+            "Vishing",
+            "Bluesnarfing",
+            "Whaling",
+            "Bluejacking",
+            "Pharming"
+        ],
+        "originalQuestionHeader": "QUESTION 20",
+        "prompt": "Phishing scams targeting people holding high positions in an organization or business are known as:\n"
+    },
+    "20": {
+        "answer": [
+            2
+        ],
+        "choices": [
+            "Whaling",
+            "Spear phishing",
+            "Vishing",
+            "Pharming"
+        ],
+        "originalQuestionHeader": "QUESTION 21",
+        "prompt": "The practice of using a telephone system to manipulate user into disclosing confidential information is called:\n"
+    },
+    "21": {
+        "answer": [
+            2
+        ],
+        "choices": [
+            "Acquiring unauthorized access to confidential data",
+            "Looking over someone's shoulder to get information",
+            "Gaining unauthorized access to restricted areas by following another person",
+            "Manipulating a user into disclosing confidential information"
+        ],
+        "originalQuestionHeader": "QUESTION 22",
+        "prompt": "What is tailgating?\n"
+    },
+    "22": {
+        "answer": [
+            0
+        ],
+        "choices": [
+            "Impersonation",
+            "Dumpster diving",
+            "Watering hole attack",
+            "Shoulder surfing"
+        ],
+        "originalQuestionHeader": "QUESTION 23",
+        "prompt": "Which social engineering attack relies on identity theft?\n"
+    },
+    "23": {
+        "answer": [
+            0
+        ],
+        "choices": [
+            "True",
+            "False"
+        ],
+        "originalQuestionHeader": "QUESTION 24",
+        "prompt": "In computer security, the term \"Dumpster diving\" is used to describe a practice of sifting through trash for \ndiscarded documents containing sensitive data. Found documents containing names and surnames of the employees along \nwith the information about positions held in the company and other data can be used to facilitate social \nengineering attacks. Having the documents shredded or incinerated before disposal makes dumpster diving less \neffective and mitigates the risk of social engineering attacks.\n"
+    },
+    "24": {
+        "answer": [
+            2
+        ],
+        "choices": [
+            "Spear phishing",
+            "Tailgating",
+            "Shoulder surfing",
+            "Spoofing"
+        ],
+        "originalQuestionHeader": "QUESTION 25",
+        "prompt": "A situation in which an unauthorized person can view another user's display or keyboard to learn their password or \nother confidential information is referred to as:\n"
+    }
+    
+}
