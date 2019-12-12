@@ -33,27 +33,33 @@ export default class DataHandler {
     randomizeQuizChoices = (problems) => {
         let newProblems = problems
         
-        
         for(let i=0;i<Object.keys(newProblems).length;i++){
-          let a = newProblems[i]['answer']
-          let b = newProblems[i]['choices']
-          let aValue = []
+          // For each problem, create a copy of the choices and answer property
+          let answer = newProblems[i]['answer']
+          let choices = newProblems[i]['choices']
+          // Will need to find the value associated with the index value(s) in the answer property
+          let answerValues = []
     
-          // Feed aValue the values each element of "a" represents (the values of "a" are indexes for b)
-          for(let x=0;x<a.length;x++){
-            aValue.push(b[a[x]])
+          // Store the value of the "answer" property's contained index values to the "choices" property.
+          for(let x=0;x<answer.length;x++){
+            answerValues.push(choices[answer[x]])
           }
+
+          // This shuffles the order of the choices.    
+          let newChoices = _.shuffle(choices).slice(0, choices.length)
+          let newAnswer = []
     
-          let bNew = _.shuffle(b).slice(0, b.length)
-          let aNew = []
-    
-          for(let y=0;y<bNew.length;y++){
-            if(aValue.includes(bNew[y])){
-              aNew.push(y)
+          // Iterate through each choice in the choices property
+          for(let y=0;y<newChoices.length;y++){
+            // If the current choice matches an answer value, the current iteration index is a new answer index
+            if(answerValues.includes(newChoices[y])){
+              newAnswer.push(y)
             }
           }
-          newProblems[i].answer = aNew
-          newProblems[i].choices = bNew
+
+          // Set the "answer" and "choices" properties to these new values.
+          newProblems[i].answer = newAnswer
+          newProblems[i].choices = newChoices
         }
         return newProblems
       }
