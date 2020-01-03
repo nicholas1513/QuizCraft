@@ -7,27 +7,27 @@ const _ = require("underscore")
 export default class DataHandler {
 
     generateProblems = (numberOfQuestions=0) => {
+        let newQuizProblems = {}
         let data = loadData()
         let newProblemKeys = this.randomizeKeyOrder(Object.keys(data).length, numberOfQuestions)
-        let newQuizProblems = this.getProblemsFromData(data, newProblemKeys)
+        
+        for(let i = 0 ;i < newProblemKeys.length; i++){
+            newQuizProblems[i] = data[newProblemKeys[i]]
+        }
+
         return newQuizProblems
     }
 
     randomizeKeyOrder = (range, numberOfQuestions) => {
         let keys = []
         for(let i=0;i<range;i++){
-          keys.push(i)
+            // create an array of integers within the provided range (totaling number of problems in the data source)
+            keys.push(i)
         }
-        let randomKeys = _.shuffle(keys).slice(0, numberOfQuestions)
-        return randomKeys
-    }
+        // mix up the order and take only as many as defined by the quiz settings, "numberOfQuestions"
+        let randomKeys = _.shuffle(keys).slice(0, numberOfQuestions) 
 
-    getProblemsFromData = (data, keys) => {
-        let newProblems = {}
-        for(let i=0;i<keys.length;i++){
-          newProblems[i] = data[keys[i]]
-        }
-        return newProblems
+        return randomKeys
     }
 
     randomizeQuizChoices = (problems) => {

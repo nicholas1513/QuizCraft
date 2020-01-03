@@ -41,6 +41,7 @@ export default class App extends Component {
 
     let dataHandler = new DataHandler()
     let newQuizProblemData = dataHandler.generateProblems(this.state.quizSettings.numberOfQuestions)
+    
     // Randomize choices for each problem in newQuizProblemData
     let newQuizProblems = dataHandler.randomizeQuizChoices(newQuizProblemData)
 
@@ -103,12 +104,17 @@ export default class App extends Component {
     let isCheckbox = Array.isArray(event)
     let currentSelection = []
 
+    // Selection is handled differently depending on type of choice element (checkbox or radio)
     if(isCheckbox){
       currentSelection = event
     }else{
       currentSelection = [event.target.value]
     }
     
+    // If the user is returning to a question, and hasnt selected anything new, the choices they 
+    //   selected earlier will be selected.  This would not require the state to be updated.
+    // However, if the user just made a new selection, or de-selection, the state needs to be 
+    //   updated to reflect the new set of selected choices for that problem.
     if(selectedChoices !== currentSelection){
       currentProblem["selectedChoices"] = currentSelection
       let answersCompleted = this.checkAnswersCompleted()
@@ -139,12 +145,12 @@ export default class App extends Component {
   }
 
   isSelected = (key) => {
+    let selected = false
     const selectedChoices = this.state.currentProblem.selectedChoices
     if(selectedChoices && selectedChoices.includes(key)){
-      return true
-    }else{
-      return false
+      selected = true
     }
+    return selected
   }
 
   choiceSelection = () =>{
@@ -154,6 +160,7 @@ export default class App extends Component {
       return framedChoices
     }
 
+    // Retrieve and store the needed properties from the currentProblem object.
     const answer = currentProblem.hasOwnProperty('answer')? currentProblem.answer: [];
     const choices = currentProblem.hasOwnProperty('choices')? currentProblem.choices: [];
     let selected = currentProblem.hasOwnProperty('selectedChoices')? currentProblem.selectedChoices: [];
@@ -170,23 +177,23 @@ export default class App extends Component {
         }
       }
       
+      // Determine type of choice based on number of elements/choices in the answer (checkbox or radio)
       let formattedChoice = () => {
-        if(answer.length>1){
+        if(answer.length > 1){
           return <Checkbox className={newClassName}  key={index} value={index}>{choice}</Checkbox>
         }else{
           return <Radio className={newClassName}  key={index} value={index}>{choice}</Radio>
         }
       }
+
       return formattedChoice()
     })
 
-    // Does this problem have multiple or single answer? (checkbox or radio)
-    if(answer.length>1){
+    // Determine type of choice grouping based on number of elements/choices in the answer.
+    if(answer.length > 1){
       framedChoices = (
         <Checkbox.Group className="problem-choice-group" style={{ width: '100%' }} 
-          key={currentProblem.originalQuestionHeader}
-          defaultValue={selected}
-          onChange={(e) => this.selectionHandler(e)}
+          key={currentProblem.originalQuestionHeader} defaultValue={selected} onChange={(e) => this.selectionHandler(e)}
           >
             <Row style={{width: '100%'}}>{choiceSelection}</Row>
         </Checkbox.Group>
@@ -194,8 +201,7 @@ export default class App extends Component {
     }else{
       framedChoices = (
         <Radio.Group className="problem-choice-group" style={{ width: '100%' }} 
-          key={currentProblem.originalQuestionHeader}
-          onChange={(e) => this.selectionHandler(e)}
+          key={currentProblem.originalQuestionHeader} onChange={(e) => this.selectionHandler(e)} 
           defaultValue={this.state.currentProblem.selectedChoices? this.state.currentProblem.selectedChoices[0]:undefined}
           >
             <Row style={{width: '100%'}}>{choiceSelection}</Row>
